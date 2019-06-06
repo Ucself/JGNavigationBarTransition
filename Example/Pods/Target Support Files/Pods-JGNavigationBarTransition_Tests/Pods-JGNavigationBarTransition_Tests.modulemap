@@ -1,0 +1,6 @@
+framework module Pods_JGNavigationBarTransition_Tests {
+  umbrella header "Pods-JGNavigationBarTransition_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
