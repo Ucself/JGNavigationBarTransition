@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF52F82E6BF355170BC991A52F68B0BB"
+               BlueprintIdentifier = "407663430B2F5B8B6E7BF58A4B95F1D0"
                BuildableName = "Pods_JGNavigationBarTransition_Tests.framework"
                BlueprintName = "Pods-JGNavigationBarTransition_Tests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DF52F82E6BF355170BC991A52F68B0BB"
+            BlueprintIdentifier = "407663430B2F5B8B6E7BF58A4B95F1D0"
             BuildableName = "Pods_JGNavigationBarTransition_Tests.framework"
             BlueprintName = "Pods-JGNavigationBarTransition_Tests"
             ReferencedContainer = "container:Pods.xcodeproj">
