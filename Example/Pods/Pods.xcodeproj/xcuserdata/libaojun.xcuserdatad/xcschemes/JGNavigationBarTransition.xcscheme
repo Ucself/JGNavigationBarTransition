@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "80C64E9697DEDB5F6B31E873F7FB2FE9"
+               BlueprintIdentifier = "42DC8756157289642DA34466CE80CC1C"
                BuildableName = "JGNavigationBarTransition.framework"
                BlueprintName = "JGNavigationBarTransition"
                ReferencedContainer = "container:Pods.xcodeproj">

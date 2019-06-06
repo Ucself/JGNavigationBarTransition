@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/lbj147123@163.com/JGNavigationBarTransition'
+  s.homepage         = 'https://github.com/Ucself/JGNavigationBarTransition'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lbj147123@163.com' => 'lbj147123@163.com' }
-  s.source           = { :git => 'https://github.com/lbj147123@163.com/JGNavigationBarTransition.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Ucself/JGNavigationBarTransition.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
