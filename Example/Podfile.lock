@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JGNavigationBarTransition: 043f38c54fa3337414e804775f54ab8f412b85ef
+  JGNavigationBarTransition: 1d49ee7d6d9d44f6f918cbb786803d57b8db907c
 
 PODFILE CHECKSUM: 391637d45564f6e06a8296ac560c0faa7591da1c
 
