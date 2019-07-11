@@ -20,35 +20,96 @@ public protocol MethodExchangeNavProtocol: class {
 
 // MARK: - UIApplication
 extension UIApplication {
-    //使用静态属性以保证只调用一次(该属性是个方法)
-    private static let runOnce:Void = {
+    //执行一次方法交换
+    public static func runOnce() {
         UINavigationBar.methodExchange()
         UIViewController.methodExchange()
         UINavigationController.methodExchangeNav()
-    }()
-    //重写next属性
-    open override var next: UIResponder?{
-        UIApplication.runOnce
-        return super.next
     }
+    //    //使用静态属性以保证只调用一次(该属性是个方法)
+    //    public static let runOnce:Void = {
+    //        UINavigationBar.methodExchange()
+    //        UIViewController.methodExchange()
+    //        UINavigationController.methodExchangeNav()
+    //    }()
+    //    //重写next属性
+    //    open override var next: UIResponder?{
+    //        UIApplication.runOnce
+    //        return super.next
+    //    }
 }
 // MARK: - UINavigationBar
 extension UINavigationBar : MethodExchangeProtocol{
+    // call swizzling methods active 主动调用交换方法
+    private static let onceToken = UUID().uuidString
     public static func methodExchange()
     {
-        
+        DispatchQueue.once(token: onceToken)
+        {
+            let needSwizzleSelectorArr = [
+                #selector(setter: titleTextAttributes)
+            ]
+
+            for selector in needSwizzleSelectorArr {
+                let str = ("jg_" + selector.description)
+                if let originalMethod = class_getInstanceMethod(self, selector),
+                    let swizzledMethod = class_getInstanceMethod(self, Selector(str)) {
+                    method_exchangeImplementations(originalMethod, swizzledMethod)
+                }
+            }
+        }
+    }
+    @objc func jg_setTitleTextAttributes(_ newTitleTextAttributes:[String : Any]?)
+    {
+        print("\(self) => jg_setTitleTextAttributes ")
+        jg_setTitleTextAttributes(newTitleTextAttributes)
     }
 }
 // MARK: - UIViewController
 extension UIViewController : MethodExchangeProtocol{
-    public static func methodExchange()
+    // call swizzling methods active 主动调用交换方法
+    private static let onceToken = UUID().uuidString
+    @objc public static func methodExchange()
     {
-        
+        DispatchQueue.once(token: onceToken)
+        {
+            let needSwizzleSelectors = [
+                #selector(viewWillAppear(_:)),
+                #selector(viewWillDisappear(_:)),
+                #selector(viewDidAppear(_:))
+            ]
+
+            for selector in needSwizzleSelectors
+            {
+                let newSelectorStr = "jg_" + selector.description
+                if let originalMethod = class_getInstanceMethod(self, selector),
+                    let swizzledMethod = class_getInstanceMethod(self, Selector(newSelectorStr)) {
+                    method_exchangeImplementations(originalMethod, swizzledMethod)
+                }
+            }
+        }
+    }
+    @objc func jg_viewWillAppear(_ animated: Bool)
+    {
+        print("\(self) => wr_viewWillAppear; count = \(self.navigationController?.viewControllers.count ?? 0)")
+        jg_viewWillAppear(animated)
+    }
+    
+    @objc func jg_viewWillDisappear(_ animated: Bool)
+    {
+        print("\(self) => jg_viewWillDisappear; count = \(self.navigationController?.viewControllers.count ?? 0)")
+        jg_viewWillDisappear(animated)
+    }
+    
+    @objc func jg_viewDidAppear(_ animated: Bool)
+    {
+        print("\(self) => jg_viewDidAppear; count = \(self.navigationController?.viewControllers.count ?? 0)")
+        jg_viewDidAppear(animated)
     }
 }
 // MARK: - UINavigationController
 extension UINavigationController : MethodExchangeNavProtocol{
-    //方法交换只执行一次
+    // call swizzling methods active 主动调用交换方法
     private static let onceToken = UUID().uuidString
     public static func methodExchangeNav()
     {
@@ -60,7 +121,7 @@ extension UINavigationController : MethodExchangeNavProtocol{
                 #selector(popToRootViewController),
                 #selector(pushViewController)
             ]
-            
+
             for selector in needSwizzleSelectorArr {
                 // _updateInteractiveTransition:  =>  wr_updateInteractiveTransition:
                 let str = ("jg_" + selector.description).replacingOccurrences(of: "__", with: "_")
@@ -71,6 +132,36 @@ extension UINavigationController : MethodExchangeNavProtocol{
             }
         }
     }
+    
+    // swizzling system method: _updateInteractiveTransition
+    @objc func jg_updateInteractiveTransition(_ percentComplete: CGFloat)
+    {
+        print("\(self) => jg_updateInteractiveTransition; percentComplete => \(percentComplete)")
+        jg_updateInteractiveTransition(percentComplete)
+    }
+    
+    // swizzling system method: popToViewController
+    @objc func jg_popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]?
+    {
+        print("\(self) => jg_popToViewController; vc = \(viewController); count = \(self.viewControllers.count)")
+        let vcs = jg_popToViewController(viewController, animated: animated)
+        return vcs
+    }
+    
+    // swizzling system method: popToRootViewControllerAnimated
+    @objc func jg_popToRootViewControllerAnimated(_ animated: Bool) -> [UIViewController]?
+    {
+        print("\(self) => jg_popToRootViewControllerAnimated; count = \(self.viewControllers.count)")
+        let vcs = jg_popToRootViewControllerAnimated(animated)
+        return vcs;
+    }
+    // swizzling system method: pushViewController
+    @objc func jg_pushViewController(_ viewController: UIViewController, animated: Bool)
+    {
+        print("\(self) => jg_pushViewController; vc = \(viewController); count = \(self.viewControllers.count)")
+        jg_pushViewController(viewController, animated: animated)
+    }
+    
 }
 
 // MARK: - Swizzling会改变全局状态,所以用 DispatchQueue.once 来确保无论多少线程都只会被执行一次

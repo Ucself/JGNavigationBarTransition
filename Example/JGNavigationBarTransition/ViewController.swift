@@ -7,13 +7,19 @@
 //
 
 import UIKit
-import JGNavigationBarTransition
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var button: UIButton!
+    var count:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.count = self.navigationController?.viewControllers.count ?? 0
+        self.title = "这是第\(count)控制器"
+        button.setTitle("按钮\(count)", for: UIControl.State.normal)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,8 +28,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonClick(_ sender: Any) {
-        print(sender)
+        let storyBoard:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc:UIViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func exitButtonClick(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     
 }
 
