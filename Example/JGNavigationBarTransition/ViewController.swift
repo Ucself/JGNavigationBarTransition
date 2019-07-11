@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGNavigationBarTransition
 
 class ViewController: UIViewController {
 
@@ -20,5 +21,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buttonClick(_ sender: Any) {
+        print(sender)
+    }
+    
 }
 
