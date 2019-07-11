@@ -19,7 +19,11 @@ class ViewController: UIViewController {
         self.count = self.navigationController?.viewControllers.count ?? 0
         self.title = "这是第\(count)控制器"
         button.setTitle("按钮\(count)", for: UIControl.State.normal)
-        
+        //设置导航栏颜色
+        let red = CGFloat(arc4random()%256)/255.0
+        let green = CGFloat(arc4random()%256)/255.0
+        let blue = CGFloat(arc4random()%256)/255.0
+        self.navBarBarTintColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {

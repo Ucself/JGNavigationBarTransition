@@ -64,9 +64,35 @@ extension UINavigationBar : MethodExchangeProtocol{
         print("\(self) => jg_setTitleTextAttributes ")
         jg_setTitleTextAttributes(newTitleTextAttributes)
     }
+    
+    // 导航栏颜色
+    public func jg_setBarTintColor(color:UIColor)
+    {
+        barTintColor = color
+    }
 }
 // MARK: - UIViewController
 extension UIViewController : MethodExchangeProtocol{
+    
+    //运行时导入属性key
+    fileprivate struct AssociatedKeys
+    {
+        static var navBarBarTintColor: String = "navBarTintColor"
+    }
+    
+    /// 导航栏颜色
+    var navBarBarTintColor: UIColor? {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedKeys.navBarBarTintColor) as? UIColor
+        }
+        set {
+            if newValue != nil {
+                objc_setAssociatedObject(self, &AssociatedKeys.navBarBarTintColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                navigationController?.navigationBar.jg_setBarTintColor(color: newValue!)
+            }
+        }
+    }
+    
     // call swizzling methods active 主动调用交换方法
     private static let onceToken = UUID().uuidString
     @objc public static func methodExchange()
@@ -91,7 +117,11 @@ extension UIViewController : MethodExchangeProtocol{
     }
     @objc func jg_viewWillAppear(_ animated: Bool)
     {
-        print("\(self) => wr_viewWillAppear; count = \(self.navigationController?.viewControllers.count ?? 0)")
+        print("\(self) => jg_viewWillAppear; count = \(self.navigationController?.viewControllers.count ?? 0)")
+        //还原背景色
+        if navBarBarTintColor != nil {
+            navigationController?.navigationBar.jg_setBarTintColor(color: navBarBarTintColor!)
+        }
         jg_viewWillAppear(animated)
     }
     
@@ -123,7 +153,7 @@ extension UINavigationController : MethodExchangeNavProtocol{
             ]
 
             for selector in needSwizzleSelectorArr {
-                // _updateInteractiveTransition:  =>  wr_updateInteractiveTransition:
+                // _updateInteractiveTransition:  =>  jg_updateInteractiveTransition:
                 let str = ("jg_" + selector.description).replacingOccurrences(of: "__", with: "_")
                 if let originalMethod = class_getInstanceMethod(self, selector),
                     let swizzledMethod = class_getInstanceMethod(self, Selector(str)) {
