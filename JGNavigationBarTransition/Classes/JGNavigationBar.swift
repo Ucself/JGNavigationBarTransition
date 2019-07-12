@@ -21,22 +21,22 @@ public protocol MethodExchangeNavProtocol: class {
 // MARK: - UIApplication
 extension UIApplication {
     //执行一次方法交换
-    public static func runOnce() {
-        UINavigationBar.methodExchange()
-        UIViewController.methodExchange()
-        UINavigationController.methodExchangeNav()
-    }
-    //    //使用静态属性以保证只调用一次(该属性是个方法)
-    //    public static let runOnce:Void = {
-    //        UINavigationBar.methodExchange()
-    //        UIViewController.methodExchange()
-    //        UINavigationController.methodExchangeNav()
-    //    }()
-    //    //重写next属性
-    //    open override var next: UIResponder?{
-    //        UIApplication.runOnce
-    //        return super.next
-    //    }
+//    public static func runOnce() {
+//        UINavigationBar.methodExchange()
+//        UIViewController.methodExchange()
+//        UINavigationController.methodExchangeNav()
+//    }
+        //使用静态属性以保证只调用一次(该属性是个方法)
+        public static let runOnce:Void = {
+            UINavigationBar.methodExchange()
+            UIViewController.methodExchange()
+            UINavigationController.methodExchangeNav()
+        }()
+        //重写next属性
+        open override var next: UIResponder?{
+            UIApplication.runOnce
+            return super.next
+        }
 }
 // MARK: - UINavigationBar
 extension UINavigationBar : MethodExchangeProtocol{
@@ -59,16 +59,37 @@ extension UINavigationBar : MethodExchangeProtocol{
             }
         }
     }
-    @objc func jg_setTitleTextAttributes(_ newTitleTextAttributes:[String : Any]?)
-    {
-        print("\(self) => jg_setTitleTextAttributes ")
-        jg_setTitleTextAttributes(newTitleTextAttributes)
-    }
     
     // 导航栏颜色
     public func jg_setBarTintColor(color:UIColor)
     {
         barTintColor = color
+    }
+    // 标题颜色
+    public func jg_setTitleColor(color:UIColor)
+    {
+        guard let oldTitleTextAttributes = self.titleTextAttributes else {
+            self.titleTextAttributes = [NSAttributedString.Key.foregroundColor:color]
+            return
+        }
+        var newTitleTextAttributes = oldTitleTextAttributes
+        newTitleTextAttributes.updateValue(color, forKey: NSAttributedString.Key.foregroundColor)
+        self.titleTextAttributes = newTitleTextAttributes
+    }
+    // 透明度
+    public func jg_setBackgroundAlpha(alpha:CGFloat)
+    {
+        if let barBackgroundView = subviews.first
+        {
+            if #available(iOS 11.0, *)
+            {   // sometimes we can't change _UIBarBackground alpha
+                for view in barBackgroundView.subviews {
+                    view.alpha = alpha
+                }
+            } else {
+                barBackgroundView.alpha = alpha
+            }
+        }
     }
 }
 // MARK: - UIViewController
@@ -77,18 +98,46 @@ extension UIViewController : MethodExchangeProtocol{
     //运行时导入属性key
     fileprivate struct AssociatedKeys
     {
-        static var navBarBarTintColor: String = "navBarTintColor"
+        static var navBarBarTintColorKey: String = "navBarBarTintColorKey"
+        static var navBarTitleColorKey: String = "navBarTitleColorKey"
+        static var navBarBackgroundAlphaKey: String = "navBarBackgroundAlphaKey"
     }
     
     /// 导航栏颜色
     var navBarBarTintColor: UIColor? {
         get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.navBarBarTintColor) as? UIColor
+            return objc_getAssociatedObject(self, &AssociatedKeys.navBarBarTintColorKey) as? UIColor
         }
         set {
             if newValue != nil {
-                objc_setAssociatedObject(self, &AssociatedKeys.navBarBarTintColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                objc_setAssociatedObject(self, &AssociatedKeys.navBarBarTintColorKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                 navigationController?.navigationBar.jg_setBarTintColor(color: newValue!)
+            }
+        }
+    }
+    
+    /// 标题颜色
+    var navBarTitleColor: UIColor? {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedKeys.navBarTitleColorKey) as? UIColor
+        }
+        set {
+            if newValue != nil {
+                objc_setAssociatedObject(self, &AssociatedKeys.navBarTitleColorKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                navigationController?.navigationBar.jg_setTitleColor(color: newValue!)
+            }
+        }
+    }
+    
+    /// 导航栏透明度
+    var navBarBackgroundAlpha:CGFloat? {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedKeys.navBarBackgroundAlphaKey) as? CGFloat
+        }
+        set {
+            if newValue != nil {
+                objc_setAssociatedObject(self, &AssociatedKeys.navBarBackgroundAlphaKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                navigationController?.navigationBar.jg_setBackgroundAlpha(alpha: newValue!)
             }
         }
     }
@@ -118,10 +167,15 @@ extension UIViewController : MethodExchangeProtocol{
     @objc func jg_viewWillAppear(_ animated: Bool)
     {
         print("\(self) => jg_viewWillAppear; count = \(self.navigationController?.viewControllers.count ?? 0)")
-        //还原背景色
+        //设置NavigationBar 背景色
         if navBarBarTintColor != nil {
             navigationController?.navigationBar.jg_setBarTintColor(color: navBarBarTintColor!)
         }
+        //设置NavigationBar title 颜色
+        if navBarTitleColor != nil {
+            navigationController?.navigationBar.jg_setTitleColor(color: navBarTitleColor!)
+        }
+        
         jg_viewWillAppear(animated)
     }
     
@@ -134,12 +188,25 @@ extension UIViewController : MethodExchangeProtocol{
     @objc func jg_viewDidAppear(_ animated: Bool)
     {
         print("\(self) => jg_viewDidAppear; count = \(self.navigationController?.viewControllers.count ?? 0)")
+        //设置NavigationBar 背景色
+        if navBarBarTintColor != nil {
+            navigationController?.navigationBar.jg_setBarTintColor(color: navBarBarTintColor!)
+        }
+        //设置NavigationBar title 颜色
+        if navBarTitleColor != nil {
+            navigationController?.navigationBar.jg_setTitleColor(color: navBarTitleColor!)
+        }
+        //设置NavigationBar 透明度
+        if navBarBackgroundAlpha != nil {
+            navigationController?.navigationBar.jg_setBackgroundAlpha(alpha: navBarBackgroundAlpha!)
+        }
+        
         jg_viewDidAppear(animated)
     }
 }
 // MARK: - UINavigationController
 extension UINavigationController : MethodExchangeNavProtocol{
-    // call swizzling methods active 主动调用交换方法
+    // MARK: - call swizzling methods active 主动调用交换方法
     private static let onceToken = UUID().uuidString
     public static func methodExchangeNav()
     {
@@ -167,6 +234,15 @@ extension UINavigationController : MethodExchangeNavProtocol{
     @objc func jg_updateInteractiveTransition(_ percentComplete: CGFloat)
     {
         print("\(self) => jg_updateInteractiveTransition; percentComplete => \(percentComplete)")
+        guard let topViewController = topViewController,let coordinator = topViewController.transitionCoordinator else {
+            jg_updateInteractiveTransition(percentComplete)
+            return
+        }
+        
+        let fromVC = coordinator.viewController(forKey: .from)
+        let toVC = coordinator.viewController(forKey: .to)
+        updateNavigationBar(fromVC: fromVC, toVC: toVC, progress: percentComplete)
+        
         jg_updateInteractiveTransition(percentComplete)
     }
     
@@ -192,6 +268,24 @@ extension UINavigationController : MethodExchangeNavProtocol{
         jg_pushViewController(viewController, animated: animated)
     }
     
+    // MARK: - extension methods
+    // 更新导航栏
+    fileprivate func updateNavigationBar(fromVC: UIViewController?, toVC: UIViewController?, progress: CGFloat)
+    {
+        // 只改变透明度
+        guard let fromBarBackgroundAlpha = fromVC?.navBarBackgroundAlpha,let toBarBackgroundAlpha = toVC?.navBarBackgroundAlpha else {
+            return
+        }
+        
+        let newBarBackgroundAlpha = self.middleAlpha(fromAlpha: fromBarBackgroundAlpha, toAlpha: toBarBackgroundAlpha, percent: progress)
+        self.navigationBar.jg_setBackgroundAlpha(alpha: newBarBackgroundAlpha)
+    }
+    // 更具转场值修改透明度值
+    fileprivate func middleAlpha(fromAlpha: CGFloat, toAlpha: CGFloat, percent: CGFloat) -> CGFloat
+    {
+        let newAlpha = fromAlpha + (toAlpha - fromAlpha) * percent
+        return newAlpha
+    }
 }
 
 // MARK: - Swizzling会改变全局状态,所以用 DispatchQueue.once 来确保无论多少线程都只会被执行一次

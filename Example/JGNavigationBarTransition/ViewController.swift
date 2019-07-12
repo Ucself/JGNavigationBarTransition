@@ -23,7 +23,19 @@ class ViewController: UIViewController {
         let red = CGFloat(arc4random()%256)/255.0
         let green = CGFloat(arc4random()%256)/255.0
         let blue = CGFloat(arc4random()%256)/255.0
-        self.navBarBarTintColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        
+        self.navBarBarTintColor = UIColor(red: red, green: green, blue: blue, alpha: 0.6)
+        //设置标题颜色
+        self.navBarTitleColor = UIColor.white
+        
+        //设置透明度
+        if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 0 {
+            self.navBarBackgroundAlpha = 1
+        }
+        else {
+            self.navBarBackgroundAlpha = 0
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
