@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rgI-fO-0Lk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="gto-p3-Ts2"/>
@@ -58,7 +58,7 @@
                             <constraint firstItem="vjb-gI-KpD" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Kts-ep-GgM"/>
                             <constraint firstItem="vjb-gI-KpD" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Ov0-3l-jmJ"/>
                             <constraint firstItem="rgI-fO-0Lk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="aDc-dK-Ncn"/>
-                            <constraint firstItem="rgI-fO-0Lk" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="mcy-6k-MOb"/>
+                            <constraint firstItem="rgI-fO-0Lk" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="100" id="mcy-6k-MOb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MhB-wb-juq"/>

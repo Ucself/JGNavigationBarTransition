@@ -53,13 +53,22 @@ class ViewController: UIViewController {
 //        else {
 //            self.jg_navBarBackgroundImage = UIImage.init(named: "1024")
 //        }
-          //设置状态栏
-          if ((self.navigationController?.viewControllers.count ?? 0) % 3) == 0 {
-             self.jg_statusBarStyle = .default
-          }
-          else if ((self.navigationController?.viewControllers.count ?? 0) % 3) == 1  {
-              self.jg_statusBarStyle = .lightContent
-          }
+//          //设置状态栏
+//          if ((self.navigationController?.viewControllers.count ?? 0) % 3) == 0 {
+//             self.jg_statusBarStyle = .default
+//          }
+//          else if ((self.navigationController?.viewControllers.count ?? 0) % 3) == 1  {
+//              self.jg_statusBarStyle = .lightContent
+//          }
+        self.jg_navBarBarTintColor = UIColor.white
+        self.navigationController?.navigationBar.shadowImage = UIImage.init(named: "1")
+        //设置状态栏
+        if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 0 {
+            self.jg_navBarShadowImageHidden = true
+        }
+        else if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 1  {
+            self.jg_navBarShadowImageHidden = false
+        }
         
     }
 

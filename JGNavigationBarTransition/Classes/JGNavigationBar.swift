@@ -106,6 +106,11 @@ extension UINavigationBar : MethodExchangeProtocol{
         tintColor = color
     }
     
+    // 导航栏横线阴影
+    fileprivate func jg_navBarShadowImageHidden(hideShadowImage:Bool){
+        self.shadowImage = (hideShadowImage == true) ? UIImage() : nil
+    }
+    
     // call swizzling methods active 主动调用交换方法
     private static let onceToken = UUID().uuidString
     public static func methodExchange()
@@ -144,6 +149,7 @@ extension UIViewController : MethodExchangeProtocol{
         static var navBarTintColorKey: String = "navBarTintColorKey"
         static var navBarBackgroundImageKey: String = "navBarBackgroundImageKey"
         static var statusBarStyle: String = "statusBarStyle"
+        static var navBarShadowImageHidden: String = "navBarShadowImageHidden"
     }
     
     /// 导航栏颜色
@@ -211,6 +217,7 @@ extension UIViewController : MethodExchangeProtocol{
     //        }
     //    }
     
+    /// 设置装填栏颜色
     var jg_statusBarStyle:UIStatusBarStyle? {
         get {
             return objc_getAssociatedObject(self, &AssociatedKeys.statusBarStyle) as? UIStatusBarStyle
@@ -219,6 +226,18 @@ extension UIViewController : MethodExchangeProtocol{
             if newValue != nil {
                 objc_setAssociatedObject(self, &AssociatedKeys.statusBarStyle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                 setNeedsStatusBarAppearanceUpdate()
+            }
+        }
+    }
+    
+    var jg_navBarShadowImageHidden:Bool? {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedKeys.navBarShadowImageHidden) as? Bool
+        }
+        set {
+            if newValue != nil {
+                objc_setAssociatedObject(self, &AssociatedKeys.navBarShadowImageHidden, newValue, .OBJC_ASSOCIATION_ASSIGN)
+                navigationController?.navigationBar.jg_navBarShadowImageHidden(hideShadowImage: newValue!)
             }
         }
     }
@@ -284,6 +303,10 @@ extension UIViewController : MethodExchangeProtocol{
         //设置NavigationBar 导航栏主题色
         if jg_navBarTintColor != nil {
             navigationController?.navigationBar.jg_setTintColor(color: jg_navBarTintColor!)
+        }
+        //设置NavigationBar 导航栏横线阴影
+        if jg_navBarShadowImageHidden != nil {
+            navigationController?.navigationBar.jg_navBarShadowImageHidden(hideShadowImage: jg_navBarShadowImageHidden!)
         }
         
         jg_viewDidAppear(animated)
