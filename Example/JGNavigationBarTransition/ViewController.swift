@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGNavigationBarTransition
 
 class ViewController: UIViewController {
     
@@ -19,12 +20,12 @@ class ViewController: UIViewController {
         self.count = self.navigationController?.viewControllers.count ?? 0
         self.title = "这是第\(count)控制器"
         button.setTitle("按钮\(count)", for: UIControl.State.normal)
-//        //设置导航栏颜色
-//        let red = CGFloat(arc4random()%256)/255.0
-//        let green = CGFloat(arc4random()%256)/255.0
-//        let blue = CGFloat(arc4random()%256)/255.0
-//
-//        self.jg_navBarBarTintColor = UIColor(red: red, green: green, blue: blue, alpha: 0.6)
+        //设置导航栏颜色
+        let red = CGFloat(arc4random()%256)/255.0
+        let green = CGFloat(arc4random()%256)/255.0
+        let blue = CGFloat(arc4random()%256)/255.0
+
+        self.jg_navBarBarTintColor = UIColor(red: red, green: green, blue: blue, alpha: 0.6)
 //        //设置标题颜色
 //        if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 0 {
 //            self.jg_navBarTitleColor = UIColor.white
@@ -60,15 +61,15 @@ class ViewController: UIViewController {
 //          else if ((self.navigationController?.viewControllers.count ?? 0) % 3) == 1  {
 //              self.jg_statusBarStyle = .lightContent
 //          }
-        self.jg_navBarBarTintColor = UIColor.white
-        self.navigationController?.navigationBar.shadowImage = UIImage.init(named: "1")
-        //设置状态栏
-        if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 0 {
-            self.jg_navBarShadowImageHidden = true
-        }
-        else if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 1  {
-            self.jg_navBarShadowImageHidden = false
-        }
+//        self.jg_navBarBarTintColor = UIColor.white
+//        self.navigationController?.navigationBar.shadowImage = UIImage.init(named: "1")
+//        //设置状态栏
+//        if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 0 {
+//            self.jg_navBarShadowImageHidden = true
+//        }
+//        else if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 1  {
+//            self.jg_navBarShadowImageHidden = false
+//        }
         
     }
 

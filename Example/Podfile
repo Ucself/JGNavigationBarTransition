@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'JGNavigationBarTransition_Example' do
-#  pod 'JGNavigationBarTransition', :path => '../'
+  pod 'JGNavigationBarTransition', :path => '../'
 
   target 'JGNavigationBarTransition_Tests' do
 #    inherit! :search_paths

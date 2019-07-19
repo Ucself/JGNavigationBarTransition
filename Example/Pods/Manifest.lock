@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: d5fe8a8f1b33814536253a715a1ace0073917a70
+PODS:
+  - JGNavigationBarTransition (0.1.1)
+
+DEPENDENCIES:
+  - JGNavigationBarTransition (from `../`)
+
+EXTERNAL SOURCES:
+  JGNavigationBarTransition:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JGNavigationBarTransition: b467f202c895e3f7a37f45b371a9d0f07e698ea6
+
+PODFILE CHECKSUM: ac413ef6d33fe9b0d039892d113b9f275a02ae4c
 
 COCOAPODS: 1.7.4
