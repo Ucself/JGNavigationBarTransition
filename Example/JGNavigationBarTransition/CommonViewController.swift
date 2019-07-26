@@ -21,8 +21,6 @@ class CommonViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
-    
-
 }
 
 extension CommonViewController:UITableViewDelegate,UITableViewDataSource {
@@ -48,7 +46,7 @@ extension CommonViewController:UITableViewDelegate,UITableViewDataSource {
         case 3:
             cell?.textLabel?.text = "导航栏透明度 -> BackgroundAlpha"
         case 4:
-            cell?.textLabel?.text = "导航栏状态栏 -> statusBarStyle"
+            cell?.textLabel?.text = "导航栏状态栏 -> StatusBarStyle"
         case 5:
             cell?.textLabel?.text = "导航栏底部阴影 -> ShadowImage"
         default:
@@ -64,6 +62,10 @@ extension CommonViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        //通用控制器
+        let storyBoard:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc:ViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
