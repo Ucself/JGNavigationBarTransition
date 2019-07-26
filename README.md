@@ -20,6 +20,16 @@ it, simply add the following line to your Podfile:
 pod 'JGNavigationBarTransition'
 ```
 
+## Use
+```
+self.jg_navBarBarTintColor = UIColor.white
+self.jg_navBarTitleColor = UIColor.black
+self.jg_navBarTintColor = .blue
+self.jg_navBarBackgroundAlpha = 1
+self.jg_statusBarStyle = .default
+self.jg_navBarShadowImageHidden = false
+```
+
 ## Author
 
 lbj147123@163.com, lbj147123@163.com
