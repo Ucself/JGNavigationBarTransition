@@ -1,5 +1,5 @@
 PODS:
-  - JGNavigationBarTransition (0.1.1)
+  - JGNavigationBarTransition (1.0.0)
 
 DEPENDENCIES:
   - JGNavigationBarTransition (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JGNavigationBarTransition: b467f202c895e3f7a37f45b371a9d0f07e698ea6
+  JGNavigationBarTransition: 58952b90ad2f5ae3cd19443198cc2c1e8a300dff
 
 PODFILE CHECKSUM: ac413ef6d33fe9b0d039892d113b9f275a02ae4c
 

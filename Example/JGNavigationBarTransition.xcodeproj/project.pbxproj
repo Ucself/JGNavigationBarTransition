@@ -17,6 +17,7 @@
 		8F1AFBD7D49046D7476CF266 /* Pods_JGNavigationBarTransition_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B6C24E7EC97D770371AC15 /* Pods_JGNavigationBarTransition_Example.framework */; };
 		9106356D22E1D2210009B28C /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106356C22E1D2210009B28C /* CommonViewController.swift */; };
 		9106356F22E1D4CA0009B28C /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106356E22E1D4CA0009B28C /* RootTabBarController.swift */; };
+		91CC523B22EAF9CB00521FFA /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CC523A22EAF9CB00521FFA /* CustomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8E9FA4FBD450A018141825C1 /* Pods-JGNavigationBarTransition_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGNavigationBarTransition_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JGNavigationBarTransition_Tests/Pods-JGNavigationBarTransition_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9106356C22E1D2210009B28C /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		9106356E22E1D4CA0009B28C /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		91CC523A22EAF9CB00521FFA /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		A07A560C1B4FCF46804A3C4A /* Pods-JGNavigationBarTransition_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGNavigationBarTransition_Example.release.xcconfig"; path = "Target Support Files/Pods-JGNavigationBarTransition_Example/Pods-JGNavigationBarTransition_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A3D753FE52363A5F77A39CEE /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE353DD716275ED3686E8DC8 /* Pods-JGNavigationBarTransition_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGNavigationBarTransition_Tests.release.xcconfig"; path = "Target Support Files/Pods-JGNavigationBarTransition_Tests/Pods-JGNavigationBarTransition_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				9106356E22E1D4CA0009B28C /* RootTabBarController.swift */,
 				9106356C22E1D2210009B28C /* CommonViewController.swift */,
+				91CC523A22EAF9CB00521FFA /* CustomViewController.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -362,6 +365,7 @@
 			files = (
 				9106356D22E1D2210009B28C /* CommonViewController.swift in Sources */,
 				9106356F22E1D4CA0009B28C /* RootTabBarController.swift in Sources */,
+				91CC523B22EAF9CB00521FFA /* CustomViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
