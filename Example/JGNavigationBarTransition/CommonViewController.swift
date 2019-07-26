@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGNavigationBarTransition
 
 class CommonViewController: UIViewController {
 
@@ -20,12 +21,19 @@ class CommonViewController: UIViewController {
     func initUI() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        //默认设置
+        self.jg_navBarBarTintColor = UIColor.white
+        self.jg_navBarTitleColor = UIColor.black
+        self.jg_navBarTintColor = .blue
+        self.jg_navBarBackgroundAlpha = 1
+        self.jg_statusBarStyle = .default
+        self.jg_navBarShadowImageHidden = false
     }
 }
 
 extension CommonViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,6 +73,23 @@ extension CommonViewController:UITableViewDelegate,UITableViewDataSource {
         //通用控制器
         let storyBoard:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
         let vc:ViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        vc.controllerType = 0
+        switch indexPath.row {
+        case 0:
+            vc.barType = .barTintColor
+        case 1:
+            vc.barType = .titleColor
+        case 2:
+            vc.barType = .tintColor
+        case 3:
+            vc.barType = .backgroundAlpha
+        case 4:
+            vc.barType = .statusBarStyle
+        case 5:
+            vc.barType = .shadowImage
+        default:
+            break
+        }
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

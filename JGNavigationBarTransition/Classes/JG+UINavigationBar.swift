@@ -103,7 +103,7 @@ extension UINavigationBar : MethodExchangeProtocol{
     
     @objc func jg_setTitleTextAttributes(_ newTitleTextAttributes:[String : Any]?)
     {
-        print("\(self) => jg_setTitleTextAttributes ")
+        //print("\(self) => jg_setTitleTextAttributes ")
         jg_setTitleTextAttributes(newTitleTextAttributes)
     }
 }
