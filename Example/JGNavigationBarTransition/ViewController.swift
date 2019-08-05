@@ -100,6 +100,7 @@ class ViewController: UIViewController {
             }
             else if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 0 {
                 self.jg_navBarBackgroundAlpha = 0
+                self.jg_navBarBarTintColor = .red
             }
         case .statusBarStyle:
             //设置状态栏
