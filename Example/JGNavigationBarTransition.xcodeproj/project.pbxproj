@@ -226,10 +226,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = QLCB8QSMBL;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = QLCB8QSMBL;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -284,10 +286,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JGNavigationBarTransition_Example/Pods-JGNavigationBarTransition_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JGNavigationBarTransition/JGNavigationBarTransition.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-4/iOS/RevealServer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGNavigationBarTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -302,10 +306,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JGNavigationBarTransition/JGNavigationBarTransition.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-4/iOS/RevealServer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGNavigationBarTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -513,6 +519,7 @@
 			baseConfigurationReference = E2DC4FE97DF873B826D963F4 /* Pods-JGNavigationBarTransition_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QLCB8QSMBL;
 				INFOPLIST_FILE = JGNavigationBarTransition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -528,6 +535,7 @@
 			baseConfigurationReference = A07A560C1B4FCF46804A3C4A /* Pods-JGNavigationBarTransition_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QLCB8QSMBL;
 				INFOPLIST_FILE = JGNavigationBarTransition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -542,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3D753FE52363A5F77A39CEE /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = QLCB8QSMBL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -564,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B8538374F6AF033CF904279 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = QLCB8QSMBL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

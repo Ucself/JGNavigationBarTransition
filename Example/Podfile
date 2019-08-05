@@ -2,7 +2,8 @@ use_frameworks!
 
 target 'JGNavigationBarTransition_Example' do
   pod 'JGNavigationBarTransition', :path => '../'
-
+  pod "Reveal-SDK","4", :configurations => ["Debug"]
+  
   target 'JGNavigationBarTransition_Tests' do
 #    inherit! :search_paths
 

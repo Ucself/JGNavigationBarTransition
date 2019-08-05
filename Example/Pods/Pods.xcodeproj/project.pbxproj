@@ -6,41 +6,68 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		DD0B0FC4388FC5A75BAC950EECAB2864 /* Reveal-SDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 676F4BB658125F19314000817E9BFB9D /* Build configuration list for PBXAggregateTarget "Reveal-SDK" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "Reveal-SDK";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		1EE9662205E506A6CC4E73A1A1148AA6 /* Pods-JGNavigationBarTransition_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E5EFB807CB4BCDFE16CD5BA3A7C18 /* Pods-JGNavigationBarTransition_Example-dummy.m */; };
+		0DA7060B0CF2A3B8DCE5A2E3005F17AB /* Pods-JGNavigationBarTransition_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEDD7B9D3C7B52295CD3BE026AC74C8F /* Pods-JGNavigationBarTransition_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E47B88DA23F978F280A3DC3D6D9B0CE /* Pods-JGNavigationBarTransition_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E5EFB807CB4BCDFE16CD5BA3A7C18 /* Pods-JGNavigationBarTransition_Example-dummy.m */; };
 		472465400958AD9B5691F6BF0B5EBB1C /* JGNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD8F38882D1148733490311B758BEC5 /* JGNavigationBar.swift */; };
-		4B3738B2ECEE4173384AB643A5F064C3 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95B46BB2B1D942FE278CD5AC5BE62197 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A3F6361DC1F9C04A186FC2D63ED012E /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95B46BB2B1D942FE278CD5AC5BE62197 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82F381A67EF49ABA104F6576C2E5C6D4 /* JG+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E6070BA1F1DE7441D6AA424425C7FD /* JG+UINavigationController.swift */; };
+		88F8756AC5CDFD96D83B443380F1718A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		8ACCF0CDA31BB9BE5021790C81E6C019 /* JG+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD465B29AABE76BAA80A95661F59BB /* JG+UIViewController.swift */; };
-		ABB1FDC757376B972BE29C4DDDC8AA5D /* Pods-JGNavigationBarTransition_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEDD7B9D3C7B52295CD3BE026AC74C8F /* Pods-JGNavigationBarTransition_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD2892E5272C111D9986ADE0EE075BC3 /* JG+UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25954F31B9132BDE2D597043F1AF4595 /* JG+UINavigationBar.swift */; };
-		B2A2D3C55517E10FD0C9FA5D9A7A06FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		B58742793A78DCE6FE108C0D4D029169 /* JGNavigationBarTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38423D78B19757996DAA795B598A0526 /* JGNavigationBarTransition-dummy.m */; };
 		B71D13CC9844B9B0FFBED86307AAE595 /* JGNavigationBarTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 302612E0D2540228BC903488D42835EB /* JGNavigationBarTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDFCE7539FDD5B614CA1A54E1EB21B24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		D43249F6EFD32D982603E062985B014F /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D84FF4026532F2C1DBAE3E4012356C /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-dummy.m */; };
 		D53E055ACCDF494C5C2B997A601351C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		FC2BE7FAA2C514AA91F0A4034A6F45F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		DDC8D6F03BDD5571CE97B05E0206B7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		E83F98C465819AE107DE49E410644411 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D84FF4026532F2C1DBAE3E4012356C /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		41D208F0964CA7D8DE045C4628537C5E /* PBXContainerItemProxy */ = {
+		46DE1EF4BE10E0A263763A50317A4934 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD0B0FC4388FC5A75BAC950EECAB2864;
+			remoteInfo = "Reveal-SDK";
+		};
+		628CD2DC27E58E8B985EF87EE4EDC8AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D6743E370375C9D4A89DAB64F1723A56;
 			remoteInfo = JGNavigationBarTransition;
 		};
-		8FFCEFC14415D618B09CBE047B811209 /* PBXContainerItemProxy */ = {
+		70337513DFB5B31C6C34D87533EDD74C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D6743E370375C9D4A89DAB64F1723A56;
 			remoteInfo = JGNavigationBarTransition;
+		};
+		FBE44FB43EA8B795738E1F917DEBAD54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD0B0FC4388FC5A75BAC950EECAB2864;
+			remoteInfo = "Reveal-SDK";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0245352FB93149B1099F990AB036B18F /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = "RevealServer-4/iOS/RevealServer.framework"; sourceTree = "<group>"; };
 		051DF6D56FDF205B9CCDCB38FF2DD1D7 /* Pods_JGNavigationBarTransition_Example_JGNavigationBarTransition_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JGNavigationBarTransition_Example_JGNavigationBarTransition_Tests.framework; path = "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3F7E2FC043D378CD8DB887473891FF /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		114939BB016B6406C0CCF37C671CB0B5 /* JGNavigationBarTransition-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JGNavigationBarTransition-Info.plist"; sourceTree = "<group>"; };
@@ -54,6 +81,7 @@
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		45F57D8B788A06221A2EDEE65632A91D /* JGNavigationBarTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGNavigationBarTransition-prefix.pch"; sourceTree = "<group>"; };
 		479406118331A80ACF614F7913367EEF /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AA2AF8B93DB9343FB11CF23E274C0A0 /* Reveal-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Reveal-SDK.xcconfig"; sourceTree = "<group>"; };
 		4D92582B42E0F5162F9B5B097AC64486 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4E234A817CB8F3CD5AAE8E90A2E010C8 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.modulemap"; sourceTree = "<group>"; };
 		544BB73ED9B475FB50A1C74F423A3755 /* Pods-JGNavigationBarTransition_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JGNavigationBarTransition_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -81,11 +109,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3774BEBCB9619FD60F76892E3BB6E396 /* Frameworks */ = {
+		2C0F29694458E2E58F5842DB765731CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC2BE7FAA2C514AA91F0A4034A6F45F1 /* Foundation.framework in Frameworks */,
+				DDC8D6F03BDD5571CE97B05E0206B7AD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +126,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2457B4976A3AB9A51C000ABAFA7E8A5 /* Frameworks */ = {
+		BCBF0A818B07E60FCAB430CF6BD57B45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2A2D3C55517E10FD0C9FA5D9A7A06FD /* Foundation.framework in Frameworks */,
+				88F8756AC5CDFD96D83B443380F1718A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +172,14 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
+		49E4B85E586C360289D135A0F5364F3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				933705988E64D2FF8A6C44A636080020 /* Reveal-SDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5D611438CBC357F61F6557DBB8C3D768 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +201,33 @@
 				0F0B3B1F01C07F39A3F74F0CD008758A /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		88026E23DD6F440B9315EDEBB44A8F78 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4AA2AF8B93DB9343FB11CF23E274C0A0 /* Reveal-SDK.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Reveal-SDK";
+			sourceTree = "<group>";
+		};
+		933705988E64D2FF8A6C44A636080020 /* Reveal-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				94C17B5290E96798B5C07CF0BFD08595 /* Frameworks */,
+				88026E23DD6F440B9315EDEBB44A8F78 /* Support Files */,
+			);
+			name = "Reveal-SDK";
+			path = "Reveal-SDK";
+			sourceTree = "<group>";
+		};
+		94C17B5290E96798B5C07CF0BFD08595 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0245352FB93149B1099F990AB036B18F /* RevealServer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BCABD6C9DB6AAD8C94149449BCE29B25 /* Development Pods */ = {
@@ -198,6 +261,7 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				BCABD6C9DB6AAD8C94149449BCE29B25 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				49E4B85E586C360289D135A0F5364F3A /* Pods */,
 				FCA5446B5FB49CA7E35532770AE55D04 /* Products */,
 				81B2B64CA68E6FF49C62E441A7775606 /* Targets Support Files */,
 			);
@@ -247,19 +311,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93262BFA52F003DC4BC206B4DE5F56C1 /* Headers */ = {
+		72E98B9826E4D79628A55AAF8A100BA1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB1FDC757376B972BE29C4DDDC8AA5D /* Pods-JGNavigationBarTransition_Example-umbrella.h in Headers */,
+				5A3F6361DC1F9C04A186FC2D63ED012E /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EF7C0414BC2727547019F4E099E9D98 /* Headers */ = {
+		FFCDC35EE587DFAED5308D71775C8FF3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B3738B2ECEE4173384AB643A5F064C3 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-umbrella.h in Headers */,
+				0DA7060B0CF2A3B8DCE5A2E3005F17AB /* Pods-JGNavigationBarTransition_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,17 +332,18 @@
 /* Begin PBXNativeTarget section */
 		0B0C05A372436C8950FAD4AD123AF01D /* Pods-JGNavigationBarTransition_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 579C631F39365CE5129A373BA3A3DB8E /* Build configuration list for PBXNativeTarget "Pods-JGNavigationBarTransition_Example" */;
+			buildConfigurationList = DE3F3A8BE832C8EE9FC68D41B64FF3A6 /* Build configuration list for PBXNativeTarget "Pods-JGNavigationBarTransition_Example" */;
 			buildPhases = (
-				93262BFA52F003DC4BC206B4DE5F56C1 /* Headers */,
-				51993FD986916745A609A1610383B62D /* Sources */,
-				D2457B4976A3AB9A51C000ABAFA7E8A5 /* Frameworks */,
-				5BD83979EFDE228A36D783C1CCFEFC17 /* Resources */,
+				FFCDC35EE587DFAED5308D71775C8FF3 /* Headers */,
+				320510264EB40251815C4B29DD85D95A /* Sources */,
+				2C0F29694458E2E58F5842DB765731CE /* Frameworks */,
+				081A78D2DD75A61D6ABF2DA6DBF7C840 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A89BEAAAF6E68E4ED6768C8F006E3594 /* PBXTargetDependency */,
+				7D129118F21AB526FCCB71F87C856EF8 /* PBXTargetDependency */,
+				B93FEC677F4F26647BB69775E0A06FC0 /* PBXTargetDependency */,
 			);
 			name = "Pods-JGNavigationBarTransition_Example";
 			productName = "Pods-JGNavigationBarTransition_Example";
@@ -287,17 +352,18 @@
 		};
 		7016CD6F2FAD1444E14B6479FE8FFB47 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3985AA1100919E7BD5CF51DF91EE8A14 /* Build configuration list for PBXNativeTarget "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests" */;
+			buildConfigurationList = 73D542CFF85D5C6353457C437C60FB99 /* Build configuration list for PBXNativeTarget "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests" */;
 			buildPhases = (
-				9EF7C0414BC2727547019F4E099E9D98 /* Headers */,
-				E3FBF5F9ECBF35C00D53FE0796A8174B /* Sources */,
-				3774BEBCB9619FD60F76892E3BB6E396 /* Frameworks */,
-				368E151F78CFAE43078FD17696AC17EC /* Resources */,
+				72E98B9826E4D79628A55AAF8A100BA1 /* Headers */,
+				F1DF46BD3B9BFF90C34B4BB9D2CE8A63 /* Sources */,
+				BCBF0A818B07E60FCAB430CF6BD57B45 /* Frameworks */,
+				F8ED8719259B511A32C7983B4A5E1CCD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4888E8A64F3FCBEF22DFE74F7E1D5D21 /* PBXTargetDependency */,
+				FCFD8FA3E7E0D74630088AC62D54672C /* PBXTargetDependency */,
+				E155CCFFD4C45430620B23C15AE705B7 /* PBXTargetDependency */,
 			);
 			name = "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests";
 			productName = "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests";
@@ -346,19 +412,13 @@
 				D6743E370375C9D4A89DAB64F1723A56 /* JGNavigationBarTransition */,
 				0B0C05A372436C8950FAD4AD123AF01D /* Pods-JGNavigationBarTransition_Example */,
 				7016CD6F2FAD1444E14B6479FE8FFB47 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests */,
+				DD0B0FC4388FC5A75BAC950EECAB2864 /* Reveal-SDK */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		368E151F78CFAE43078FD17696AC17EC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BD83979EFDE228A36D783C1CCFEFC17 /* Resources */ = {
+		081A78D2DD75A61D6ABF2DA6DBF7C840 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,14 +432,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8ED8719259B511A32C7983B4A5E1CCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		51993FD986916745A609A1610383B62D /* Sources */ = {
+		320510264EB40251815C4B29DD85D95A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE9662205E506A6CC4E73A1A1148AA6 /* Pods-JGNavigationBarTransition_Example-dummy.m in Sources */,
+				0E47B88DA23F978F280A3DC3D6D9B0CE /* Pods-JGNavigationBarTransition_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,68 +462,74 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3FBF5F9ECBF35C00D53FE0796A8174B /* Sources */ = {
+		F1DF46BD3B9BFF90C34B4BB9D2CE8A63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D43249F6EFD32D982603E062985B014F /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-dummy.m in Sources */,
+				E83F98C465819AE107DE49E410644411 /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4888E8A64F3FCBEF22DFE74F7E1D5D21 /* PBXTargetDependency */ = {
+		7D129118F21AB526FCCB71F87C856EF8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JGNavigationBarTransition;
 			target = D6743E370375C9D4A89DAB64F1723A56 /* JGNavigationBarTransition */;
-			targetProxy = 8FFCEFC14415D618B09CBE047B811209 /* PBXContainerItemProxy */;
+			targetProxy = 628CD2DC27E58E8B985EF87EE4EDC8AE /* PBXContainerItemProxy */;
 		};
-		A89BEAAAF6E68E4ED6768C8F006E3594 /* PBXTargetDependency */ = {
+		B93FEC677F4F26647BB69775E0A06FC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Reveal-SDK";
+			target = DD0B0FC4388FC5A75BAC950EECAB2864 /* Reveal-SDK */;
+			targetProxy = FBE44FB43EA8B795738E1F917DEBAD54 /* PBXContainerItemProxy */;
+		};
+		E155CCFFD4C45430620B23C15AE705B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Reveal-SDK";
+			target = DD0B0FC4388FC5A75BAC950EECAB2864 /* Reveal-SDK */;
+			targetProxy = 46DE1EF4BE10E0A263763A50317A4934 /* PBXContainerItemProxy */;
+		};
+		FCFD8FA3E7E0D74630088AC62D54672C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JGNavigationBarTransition;
 			target = D6743E370375C9D4A89DAB64F1723A56 /* JGNavigationBarTransition */;
-			targetProxy = 41D208F0964CA7D8DE045C4628537C5E /* PBXContainerItemProxy */;
+			targetProxy = 70337513DFB5B31C6C34D87533EDD74C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		632F971CAB9B9B7C38C8E0AF59098963 /* Debug */ = {
+		22DB3804CEC01B94A0E56D68024C1D22 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 393C4C25D9F08E0AA225DE09D1C5565F /* Pods-JGNavigationBarTransition_Example.debug.xcconfig */;
+			baseConfigurationReference = 4AA2AF8B93DB9343FB11CF23E274C0A0 /* Reveal-SDK.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example/Pods-JGNavigationBarTransition_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example/Pods-JGNavigationBarTransition_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C6FB1643AD58331083601B84CBAEBE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA2AF8B93DB9343FB11CF23E274C0A0 /* Reveal-SDK.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		7E4A04FB8A3AC64BDCC8984B385A1554 /* Debug */ = {
+		895DF3B2ABD33946445D91E9DB2EB4F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 479406118331A80ACF614F7913367EEF /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.debug.xcconfig */;
+			baseConfigurationReference = 5F8DB72F32738D1779CFBD13AA7997EA /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -482,10 +555,45 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
+		};
+		AA6681FEDE62B99CA5C072DF8ED4EF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFB3F69E16B4682681F6796B30A8A41B /* Pods-JGNavigationBarTransition_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example/Pods-JGNavigationBarTransition_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example/Pods-JGNavigationBarTransition_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		B0087CB4594321EF41619F3181FE120E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -611,40 +719,6 @@
 			};
 			name = Debug;
 		};
-		CADB6310038657BBD5E927887E6B1FFD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFB3F69E16B4682681F6796B30A8A41B /* Pods-JGNavigationBarTransition_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example/Pods-JGNavigationBarTransition_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example/Pods-JGNavigationBarTransition_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		D4B870FB8392EF7BA74C0E9A1A22F75B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F25277CCD5EC023376D6A40203A319A2 /* JGNavigationBarTransition.xcconfig */;
@@ -675,40 +749,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		D6C35D7A08C3164426FF51B9EE66351E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F8DB72F32738D1779CFBD13AA7997EA /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		E16B73355EA3D185E425054B537426DA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -742,6 +782,72 @@
 			};
 			name = Release;
 		};
+		E62A011672632799179E3D9C7DA51776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 393C4C25D9F08E0AA225DE09D1C5565F /* Pods-JGNavigationBarTransition_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example/Pods-JGNavigationBarTransition_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example/Pods-JGNavigationBarTransition_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB953F264823FF114942D3E4DCDC257E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 479406118331A80ACF614F7913367EEF /* Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests/Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -750,15 +856,6 @@
 			buildConfigurations = (
 				D4B870FB8392EF7BA74C0E9A1A22F75B /* Debug */,
 				E16B73355EA3D185E425054B537426DA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3985AA1100919E7BD5CF51DF91EE8A14 /* Build configuration list for PBXNativeTarget "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7E4A04FB8A3AC64BDCC8984B385A1554 /* Debug */,
-				D6C35D7A08C3164426FF51B9EE66351E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -772,11 +869,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		579C631F39365CE5129A373BA3A3DB8E /* Build configuration list for PBXNativeTarget "Pods-JGNavigationBarTransition_Example" */ = {
+		676F4BB658125F19314000817E9BFB9D /* Build configuration list for PBXAggregateTarget "Reveal-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				632F971CAB9B9B7C38C8E0AF59098963 /* Debug */,
-				CADB6310038657BBD5E927887E6B1FFD /* Release */,
+				4C6FB1643AD58331083601B84CBAEBE0 /* Debug */,
+				22DB3804CEC01B94A0E56D68024C1D22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73D542CFF85D5C6353457C437C60FB99 /* Build configuration list for PBXNativeTarget "Pods-JGNavigationBarTransition_Example-JGNavigationBarTransition_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB953F264823FF114942D3E4DCDC257E /* Debug */,
+				895DF3B2ABD33946445D91E9DB2EB4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE3F3A8BE832C8EE9FC68D41B64FF3A6 /* Build configuration list for PBXNativeTarget "Pods-JGNavigationBarTransition_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E62A011672632799179E3D9C7DA51776 /* Debug */,
+				AA6681FEDE62B99CA5C072DF8ED4EF0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

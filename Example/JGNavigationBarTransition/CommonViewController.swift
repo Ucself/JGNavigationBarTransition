@@ -22,7 +22,7 @@ class CommonViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         //默认设置
-        self.jg_navBarBarTintColor = UIColor.white
+        self.jg_navBarBarTintColor = UIColor.yellow
         self.jg_navBarTitleColor = UIColor.black
         self.jg_navBarTintColor = .blue
         self.jg_navBarBackgroundAlpha = 1

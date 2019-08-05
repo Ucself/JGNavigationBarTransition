@@ -94,13 +94,11 @@ class ViewController: UIViewController {
             self.jg_navBarTintColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
         case .backgroundAlpha:
             //设置透明度
-            if ((self.navigationController?.viewControllers.count ?? 0) % 3) == 2 {
+            if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 1 {
                 self.jg_navBarBackgroundAlpha = 1
+                self.jg_navBarBarTintColor = .red
             }
-            else if ((self.navigationController?.viewControllers.count ?? 0) % 3) == 0 {
-                self.jg_navBarBackgroundAlpha = 0.5
-            }
-            else{
+            else if ((self.navigationController?.viewControllers.count ?? 0) % 2) == 0 {
                 self.jg_navBarBackgroundAlpha = 0
             }
         case .statusBarStyle:

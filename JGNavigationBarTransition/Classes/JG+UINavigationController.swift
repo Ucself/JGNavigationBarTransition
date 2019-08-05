@@ -19,6 +19,7 @@ extension UINavigationController : MethodExchangeNavProtocol{
         {
             let needSwizzleSelectorArr = [
                 NSSelectorFromString("_updateInteractiveTransition:"),
+                #selector(popViewController),
                 #selector(popToViewController),
                 #selector(popToRootViewController),
                 #selector(pushViewController)
@@ -31,6 +32,12 @@ extension UINavigationController : MethodExchangeNavProtocol{
                     let swizzledMethod = class_getInstanceMethod(self, Selector(str)) {
                     method_exchangeImplementations(originalMethod, swizzledMethod)
                 }
+            }
+            //popViewController 要特殊处理
+            if let originalMethod = class_getInstanceMethod(self, #selector(UINavigationController.popViewController(animated:))),
+                let swizzledMethod = class_getInstanceMethod(self,
+                                                             #selector(UINavigationController.jg_popViewController(animated:))) {
+                method_exchangeImplementations(originalMethod, swizzledMethod)
             }
         }
     }
@@ -50,11 +57,19 @@ extension UINavigationController : MethodExchangeNavProtocol{
         
         jg_updateInteractiveTransition(percentComplete)
     }
+    // swizzling system method: popViewController
+    @objc func jg_popViewController(animated: Bool) -> UIViewController? {
+        //print("\(self) => jg_popViewController; count = \(self.viewControllers.count)")
+        self.popCADisplay()
+        let vc = jg_popViewController(animated: animated)
+        return vc
+    }
     
     // swizzling system method: popToViewController
     @objc func jg_popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]?
     {
         //print("\(self) => jg_popToViewController; vc = \(viewController); count = \(self.viewControllers.count)")
+        self.popCADisplay()
         let vcs = jg_popToViewController(viewController, animated: animated)
         return vcs
     }
@@ -63,6 +78,7 @@ extension UINavigationController : MethodExchangeNavProtocol{
     @objc func jg_popToRootViewControllerAnimated(_ animated: Bool) -> [UIViewController]?
     {
         //print("\(self) => jg_popToRootViewControllerAnimated; count = \(self.viewControllers.count)")
+        self.popCADisplay()
         let vcs = jg_popToRootViewControllerAnimated(animated)
         return vcs;
     }
@@ -74,6 +90,39 @@ extension UINavigationController : MethodExchangeNavProtocol{
     }
     
     // MARK: - extension methods
+    struct popProperties {
+        fileprivate static let popDuration = 0.13
+        fileprivate static var displayCount = 0
+        fileprivate static var popProgress:CGFloat {
+            let all:CGFloat = CGFloat(60.0 * popDuration)
+            let current = min(all, CGFloat(displayCount))
+            return current / all
+        }
+    }
+    //通过CA 对颜色进行渐变
+    fileprivate func popCADisplay(){
+        var displayLink:CADisplayLink? = CADisplayLink(target: self, selector: #selector(popNeedDisplay))
+        displayLink?.add(to: RunLoop.main, forMode: .common)
+        CATransaction.setCompletionBlock {
+            displayLink?.invalidate()
+            displayLink = nil
+            popProperties.displayCount = 0
+        }
+    }
+    /// barTintColor 跳转到最终 VC 颜色
+    @objc fileprivate func popNeedDisplay()
+    {
+        guard let topViewController = topViewController,
+            let coordinator       = topViewController.transitionCoordinator else {
+                return
+        }
+        
+        popProperties.displayCount += 1
+        let popProgress = popProperties.popProgress
+        let fromVC = coordinator.viewController(forKey: .from)
+        let toVC = coordinator.viewController(forKey: .to)
+        updateNavigationBar(fromVC: fromVC, toVC: toVC, progress: popProgress)
+    }
     // 更新导航栏
     fileprivate func updateNavigationBar(fromVC: UIViewController?, toVC: UIViewController?, progress: CGFloat)
     {
@@ -86,6 +135,11 @@ extension UINavigationController : MethodExchangeNavProtocol{
         if let fromTintColor = fromVC?.jg_navBarTintColor,let toTintColor = toVC?.jg_navBarTintColor {
             let newTintColor = self.middleColor(fromColor: fromTintColor, toColor: toTintColor, percent: progress)
             self.navigationBar.jg_setTintColor(color: newTintColor)
+        }
+        // 改变背景色
+        if let fromBarTintColor = fromVC?.jg_navBarBarTintColor,let toBarTintColor = toVC?.jg_navBarBarTintColor {
+            let newTintColor = self.middleColor(fromColor: fromBarTintColor, toColor: toBarTintColor, percent: progress)
+            self.navigationBar.jg_setBarTintColor(color: newTintColor)
         }
     }
     /// 根据转场值修改透明度值
